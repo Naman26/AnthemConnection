@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/plainText"
+        android:layout_width="98dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Options"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.26" />
+
+
+    <TextView
+        android:id="@+id/editText2"
+        android:layout_width="108dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Text Size"
+        android:textSize="25dp"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="332dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupTextSize"
+        android:layout_width="199dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="366dp">
+
+
+        <RadioButton
+            android:id="@+id/radioSize20"
+            android:layout_width="56dp"
+            android:layout_height="wrap_content"
+            android:text="20"
+            android:textSize="20dp"
+            tools:layout_editor_absoluteX="84dp"
+            tools:layout_editor_absoluteY="148dp" />
+
+        <RadioButton
+            android:id="@+id/radioSize25"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:text="25"
+            android:textSize="25dp"
+            tools:layout_editor_absoluteX="156dp"
+            tools:layout_editor_absoluteY="147dp" />
+
+        <RadioButton
+            android:id="@+id/radioSize30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30"
+            android:textSize="30dp"
+            tools:layout_editor_absoluteX="233dp"
+            tools:layout_editor_absoluteY="144dp" />
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/editText3"
+        android:layout_width="78dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Sound"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroupSound"
+        app:layout_constraintTop_toBottomOf="@+id/plainText"
+        tools:layout_editor_absoluteX="84dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupSound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background=""
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="266dp">
+
+
+        <RadioButton
+            android:id="@+id/radioSoundOn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="On" />
+
+        <RadioButton
+            android:id="@+id/radioSoundOff"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:text="Off" />
+    </RadioGroup>
+
+
+    <RadioGroup
+        android:id="@+id/radioGroupQuizSize"
+
+        >
+
+
+
+    </RadioGroup>
+
+
+</android.support.constraint.ConstraintLayout>
