@@ -147,7 +147,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
         android:ems="10"
-        android:hint="Feedback: Optional"
+        android:hint="Please provide us feedback(Optional)"
         android:inputType="textMultiLine"
         app:layout_constraintBottom_toTopOf="@+id/stronglyAgree"
         app:layout_constraintEnd_toEndOf="parent"
