@@ -2,15 +2,12 @@ package com.iharnoor.anthemconnection
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.design.widget.Snackbar
 import android.support.design.widget.NavigationView
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
-import android.view.Menu
 import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_survey.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.content_main.*
 import kotlinx.android.synthetic.main.nav_header_main.*
@@ -33,7 +30,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         toggle.syncState()
 
 //        homeBtn.setOnClickListener {
-//
+//            val intent = Intent(this, MainActivity::class.java)
+//            startActivity(intent)
 //        }
 
 
@@ -69,16 +67,17 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
         when (item.itemId) {
-            R.id.nav_camera -> {
-                // Handle the camera action
+            R.id.achievements -> {
+                val intent = Intent(this, Achievements::class.java)
+                startActivity(intent)
             }
-            R.id.nav_gallery -> {
+            R.id.leaderboard -> {
+                val intent = Intent(this, LeaderBoard::class.java)
+                startActivity(intent)
             }
-            R.id.nav_slideshow -> {
-            }
-            R.id.nav_manage -> {
-            }
-            R.id.record -> {
+            R.id.options -> {
+                val intent = Intent(this, Options::class.java)
+                startActivity(intent)
             }
         }
         drawer_layout.closeDrawer(GravityCompat.START)
