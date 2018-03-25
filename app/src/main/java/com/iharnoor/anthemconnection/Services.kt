@@ -27,47 +27,13 @@ var selectedEmoji = "happy"
 val hashmap = HashMap<String, String>()
 
 fun pushFirebase(question: String, username: String, answer: String, uniqueKey: String) {
-
-
     val database = FirebaseDatabase.getInstance()
     val myRef = database.getReference()
-    myRef.child("user").setValue(hashmap)
-//    val ques1 = HashMap<String,String>()
 
-//    val ques = Question(question,username,answer)
-//    val question = HashMap<String, String>()
-
-    hashmap.put("${uniqueKey}question", question)
     hashmap.put("${uniqueKey}username", username)
     hashmap.put("${uniqueKey}answer", answer)
 
-//    hashmap.put("array", hashmap)
+    myRef.child("${question}").child("username").setValue("$username")
+    myRef.child("${question}").child("answer").setValue("$answer")
 
-//    database.("users").child(userId).setValue(user);
-//    myRef.setValue(hashmap)
-//    myRef.setValue(ques)
-//     myRef.child("user").setValue(hashmap)
 }
-
-//val database = FirebaseDatabase.getInstance()!!
-//val myRef = database.getReference()!!
-
-//fun pushFirebase(question: String, username: String, answer: String) {
-//    val ques = Question(question, username, answer)
-////    val ques1 = HashMap<String,String>()
-//
-////    val ques = Question(question,username,answer)
-////    val question = HashMap<String, String>()
-//
-////    hashmap.put("question", question)
-////    hashmap.put("username", username)
-////    hashmap.put("answer", answer)
-//
-//    myRef.child("messsage").child(question).setValue(ques)
-////    mDatabase.child("users").child(userId).setValue(user);
-////    hashmap.put("array", hashmap)
-//
-////    database.("users").child(userId).setValue(user);
-////    myRef.setValue(hashmap)
-////    myRef.setValue(ques)
-//}
