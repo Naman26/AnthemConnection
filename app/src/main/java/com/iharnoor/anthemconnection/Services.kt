@@ -1,6 +1,12 @@
 package com.iharnoor.anthemconnection
 
-val listQuestions = listOf<String>("I feel like a valuable team member at Anthem:",
+import com.google.firebase.database.FirebaseDatabase
+import kotlinx.android.synthetic.main.activity_main.*
+import org.json.JSONArray
+import org.json.JSONObject
+
+
+val questionsList = listOf<String>("I feel like a valuable team member at Anthem:",
         "My work environment allows me to make progress at my job:",
         "I am comfortable asking coworkers and supervisors for help:",
         "If I get upset at work, I know who to talk to:",
@@ -13,3 +19,55 @@ val listQuestions = listOf<String>("I feel like a valuable team member at Anthem
 
 var count = 1
 var streaks = 0
+
+//val answerlist= arrayListOf<>()
+val jsonArray = JSONArray()
+var selectedEmoji = "happy"
+//var btnName ="/"
+val hashmap = HashMap<String, String>()
+
+fun pushFirebase(question: String, username: String, answer: String, uniqueKey: String) {
+
+
+    val database = FirebaseDatabase.getInstance()
+    val myRef = database.getReference()
+    myRef.child("user").setValue(hashmap)
+//    val ques1 = HashMap<String,String>()
+
+//    val ques = Question(question,username,answer)
+//    val question = HashMap<String, String>()
+
+    hashmap.put("${uniqueKey}question", question)
+    hashmap.put("${uniqueKey}username", username)
+    hashmap.put("${uniqueKey}answer", answer)
+
+//    hashmap.put("array", hashmap)
+
+//    database.("users").child(userId).setValue(user);
+//    myRef.setValue(hashmap)
+//    myRef.setValue(ques)
+//     myRef.child("user").setValue(hashmap)
+}
+
+//val database = FirebaseDatabase.getInstance()!!
+//val myRef = database.getReference()!!
+
+//fun pushFirebase(question: String, username: String, answer: String) {
+//    val ques = Question(question, username, answer)
+////    val ques1 = HashMap<String,String>()
+//
+////    val ques = Question(question,username,answer)
+////    val question = HashMap<String, String>()
+//
+////    hashmap.put("question", question)
+////    hashmap.put("username", username)
+////    hashmap.put("answer", answer)
+//
+//    myRef.child("messsage").child(question).setValue(ques)
+////    mDatabase.child("users").child(userId).setValue(user);
+////    hashmap.put("array", hashmap)
+//
+////    database.("users").child(userId).setValue(user);
+////    myRef.setValue(hashmap)
+////    myRef.setValue(ques)
+//}

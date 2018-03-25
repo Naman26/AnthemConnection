@@ -11,6 +11,10 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 import kotlinx.android.synthetic.main.content_main.*
 import kotlinx.android.synthetic.main.nav_header_main.*
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import org.json.JSONObject
+
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -18,22 +22,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
-
-//        fab.setOnClickListener { view ->
-//            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                    .setAction("Action", null).show()
-//        }
-
         val toggle = ActionBarDrawerToggle(
                 this, drawer_layout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
         drawer_layout.addDrawerListener(toggle)
         toggle.syncState()
-
-//        homeBtn.setOnClickListener {
-//            val intent = Intent(this, MainActivity::class.java)
-//            startActivity(intent)
-//        }
-
 
         beginBtn.setOnClickListener {
             count = 0
@@ -43,6 +35,24 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
 
 
+//
+//        val answer = JSONObject()
+//        answer.put("username", "Mr. Singh")
+//        answer.put("answer", "Strongly Agree. Great answer")
+//        val jsonObj = JSONObject()
+//        jsonObj.put(questionsList[0], answer)
+//
+        // Write a message to the databaseStrongly Agree. Great answer
+//        val database = FirebaseDatabase.getInstance()
+//        val myRef = database.getReference("message")
+//
+//        val hash = HashMap<String, String>()
+////        val question = HashMap<String, String>()
+//        hash.put("question", questionsList[0])
+//        hash.put("username", "Mr. Singh")
+//        hash.put("answer", "Strongly Agree. Great answer")
+//
+//        myRef.setValue(hash)
         nav_view.setNavigationItemSelectedListener(this)
     }
 
@@ -53,7 +63,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             super.onBackPressed()
         }
     }
-
     //    override fun onOptionsItemSelected(item: MenuItem): Boolean {
 //        // Handle action bar item clicks here. The action bar will
 //        // automatically handle clicks on the Home/Up button, so long
