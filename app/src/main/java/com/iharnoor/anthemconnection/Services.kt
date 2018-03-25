@@ -12,3 +12,4 @@ val listQuestions = listOf<String>("I feel like a valuable team member at Anthem
         "I tend to be the leader of my group projects:")
 
 var count = 1
+var streaks = 0
