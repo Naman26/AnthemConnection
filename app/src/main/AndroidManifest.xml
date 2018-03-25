@@ -22,7 +22,11 @@
         <activity android:name=".Survey" />
         <activity android:name=".Options" />
         <activity android:name=".Achievements" />
-        <activity android:name=".LeaderBoard"></activity>
+        <activity android:name=".LeaderBoard" />
+        <activity
+            android:name=".Feedback"
+            android:label="@string/title_activity_feedback"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

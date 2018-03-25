@@ -79,6 +79,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 val intent = Intent(this, Options::class.java)
                 startActivity(intent)
             }
+            R.id.feedback -> {
+                val intent = Intent(this, Feedback::class.java)
+                startActivity(intent)
+            }
         }
         drawer_layout.closeDrawer(GravityCompat.START)
         return true

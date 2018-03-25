@@ -15,7 +15,12 @@
         <item
             android:id="@+id/options"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Options" />>
+            android:title="Options" />
+
+        <item
+            android:id="@+id/feedback"
+            android:icon="@drawable/ic_assessment_black_24dp"
+            android:title="Feedback" />>
 
     </group>
 
