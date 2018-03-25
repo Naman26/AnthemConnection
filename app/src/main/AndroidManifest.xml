@@ -19,7 +19,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Survey"></activity>
+        <activity android:name=".Survey" />
+        <activity android:name=".Achievements"></activity>
     </application>
 
 </manifest>

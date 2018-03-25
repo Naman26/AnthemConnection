@@ -10,3 +10,5 @@ val listQuestions = listOf<String>("I feel like a valuable team member at Anthem
         "I feel like work is distributed evenly and fairly in my group projects:",
         "Goals are made faster when working in a group:",
         "I tend to be the leader of my group projects:")
+
+var surveysCompleted = 1
